@@ -1,27 +1,33 @@
-# Guess a number between 1 to 100
-# Secret number
-# guess count
+# Loop
+    # generate a random number
+    # ask user to make a guess
+    # if not valid
+    #   print error message
+    # if number < guess
+    #   print too low
+    # if number > guess
+    #   print too high
 
-import range
+import random
 
 
-guess_count = 0
-#guess_limit = 0
-secret_number = 8
+number_to_guess = random.randint(1, 100)
 
-while guess_count:
-    guess = int(input('Guess a number between 1-100: '))
-    
-    if guess > secret_number:
-        print('Too High!')
+while True:
 
-    elif guess < secret_number:
-        print('Too Low!')
+    try:
 
-    elif guess == secret_number:
-        print('Congratulations! You guessed the number!')
+        guess = int(input('Guess a number between 1-100: '))
 
-        break
+        if guess < number_to_guess:
+            print('Too low!')
+        elif guess > number_to_guess:
+            print('Too High!')
+        else:
+            print('Congrats! You guessed the number!')
+            break
 
-else:
-    print('Please put a valid number')
+    except ValueError:
+        print('Please input a valid number.')
+
+        
