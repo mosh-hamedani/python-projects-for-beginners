@@ -35,7 +35,7 @@ def main():
   source_currency = get_currency('Source')
   target_currency = get_currency('Target')
   converted_amount = convert(amount, source_currency, target_currency)
-  print(f'{amount} {source_currency} is equal to {converted_amount:.2f}')
+  print(f'{amount} {source_currency} is equal to {converted_amount:.2f} {target_currency}')
 
 
 if __name__ == "__main__":
