@@ -1,5 +1,6 @@
 import random
-from termcolor import cprint
+from termcolor import cprint # What is termcolor when i try to run it 'termcolor' has a yellow zig zag line tell me how to fix it plz!! From Dawood 
+
 
 QUESTION = 'question'
 OPTIONS = 'options'
